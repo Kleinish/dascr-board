@@ -13,9 +13,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dascr/dascr-board/logger"
-	"github.com/dascr/dascr-board/score"
-	"github.com/dascr/dascr-board/throw"
+	"github.com/Kleinish/dascr-board/logger"
+	"github.com/Kleinish/dascr-board/score"
+	"github.com/Kleinish/dascr-board/throw"
 	"github.com/go-chi/chi"
 	"github.com/google/uuid"
 	"github.com/h2non/filetype"

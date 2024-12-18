@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/dascr/dascr-board/logger"
-	"github.com/dascr/dascr-board/player"
-	"github.com/dascr/dascr-board/settings"
-	"github.com/dascr/dascr-board/ws"
+	"github.com/Kleinish/dascr-board/logger"
+	"github.com/Kleinish/dascr-board/player"
+	"github.com/Kleinish/dascr-board/settings"
+	"github.com/Kleinish/dascr-board/ws"
 	"github.com/go-chi/chi"
 )
 

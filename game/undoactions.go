@@ -1,9 +1,9 @@
 package game
 
 import (
-	"github.com/dascr/dascr-board/throw"
-	"github.com/dascr/dascr-board/undo"
-	"github.com/dascr/dascr-board/utils"
+	"github.com/Kleinish/dascr-board/throw"
+	"github.com/Kleinish/dascr-board/undo"
+	"github.com/Kleinish/dascr-board/utils"
 )
 
 // UndoCreateThrowRound is the undo action for CREATETHROWROUND

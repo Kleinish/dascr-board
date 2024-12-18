@@ -6,14 +6,14 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/dascr/dascr-board/logger"
-	"github.com/dascr/dascr-board/player"
-	"github.com/dascr/dascr-board/podium"
-	"github.com/dascr/dascr-board/score"
-	"github.com/dascr/dascr-board/throw"
-	"github.com/dascr/dascr-board/undo"
-	"github.com/dascr/dascr-board/utils"
-	"github.com/dascr/dascr-board/ws"
+	"github.com/Kleinish/dascr-board/logger"
+	"github.com/Kleinish/dascr-board/player"
+	"github.com/Kleinish/dascr-board/podium"
+	"github.com/Kleinish/dascr-board/score"
+	"github.com/Kleinish/dascr-board/throw"
+	"github.com/Kleinish/dascr-board/undo"
+	"github.com/Kleinish/dascr-board/utils"
+	"github.com/Kleinish/dascr-board/ws"
 )
 
 // EliminiationGame will hold the Eliminiation game information

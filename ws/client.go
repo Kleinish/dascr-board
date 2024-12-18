@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/dascr/dascr-board/logger"
+	"github.com/Kleinish/dascr-board/logger"
 	"github.com/go-chi/chi"
 	"github.com/gorilla/websocket"
 )

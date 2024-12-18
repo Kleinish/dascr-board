@@ -5,13 +5,13 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/dascr/dascr-board/player"
-	"github.com/dascr/dascr-board/podium"
-	"github.com/dascr/dascr-board/score"
-	"github.com/dascr/dascr-board/throw"
-	"github.com/dascr/dascr-board/undo"
-	"github.com/dascr/dascr-board/utils"
-	"github.com/dascr/dascr-board/ws"
+	"github.com/Kleinish/dascr-board/player"
+	"github.com/Kleinish/dascr-board/podium"
+	"github.com/Kleinish/dascr-board/score"
+	"github.com/Kleinish/dascr-board/throw"
+	"github.com/Kleinish/dascr-board/undo"
+	"github.com/Kleinish/dascr-board/utils"
+	"github.com/Kleinish/dascr-board/ws"
 )
 
 // CricketGameController will hold the status of different numbers

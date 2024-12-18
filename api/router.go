@@ -7,9 +7,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/dascr/dascr-board/api/routes"
-	"github.com/dascr/dascr-board/logger"
-	"github.com/dascr/dascr-board/ws"
+	"github.com/Kleinish/dascr-board/api/routes"
+	"github.com/Kleinish/dascr-board/logger"
+	"github.com/Kleinish/dascr-board/ws"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/cors"
