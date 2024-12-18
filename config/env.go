@@ -4,7 +4,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/dascr/dascr-board/logger"
+	"github.com/kleinish/dascr-board/logger"
 )
 
 // MustGet will check for the env settings
