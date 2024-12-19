@@ -14,7 +14,7 @@ COPY . .
 # Upgrade npm to the latest version, install dependencies, and build
 RUN npm install && \
     npm audit fix --force && \
-    npm run build
+    npm run build || { echo 'Build failed'; exit 1; }
 
 # Create runtime image
 FROM caddy:alpine
