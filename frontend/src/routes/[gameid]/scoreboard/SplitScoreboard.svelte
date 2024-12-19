@@ -132,28 +132,30 @@
           </div>
           <div slot="score" class="h-full">
             <table class="w-full h-full">
-              <tr class="">
-                {#each player.LastThrows as thr, i}
-                  <td
-                    class="p-2 text-4xl font-extrabold text-center w-1/4 border-dashed border-white border-opacity-10"
-                    class:border-l={i != 0}
-                  >
-                    {#if thr.Modifier === 2}
-                      D{thr.Number}
-                    {:else if thr.Modifier === 3}
-                      T{thr.Number}
-                    {:else}{thr.Number}{/if}
-                  </td>
-                {/each}
-                {#each Array(3 - player.LastThrows.length) as _, __}
-                  <td
-                    class="p-2 text-4xl font-extrabold text-center w-1/4 border-dashed border-white border-opacity-10"
-                    class:border-l={i != 0}
-                  >
-                    -
-                  </td>
-                {/each}
-              </tr>
+              <tbody>
+                <tr class="">
+                  {#each player.LastThrows as thr, i}
+                    <td
+                      class="p-2 text-4xl font-extrabold text-center w-1/4 border-dashed border-white border-opacity-10"
+                      class:border-l={i != 0}
+                    >
+                      {#if thr.Modifier === 2}
+                        D{thr.Number}
+                      {:else if thr.Modifier === 3}
+                        T{thr.Number}
+                      {:else}{thr.Number}{/if}
+                    </td>
+                  {/each}
+                  {#each Array(3 - player.LastThrows.length) as _, __}
+                    <td
+                      class="p-2 text-4xl font-extrabold text-center w-1/4 border-dashed border-white border-opacity-10"
+                      class:border-l={i != 0}
+                    >
+                      -
+                    </td>
+                  {/each}
+                </tr>
+              </tbody>
             </table>
           </div>
         </PlayerCard>
