@@ -12,8 +12,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Upgrade npm to the latest version, install dependencies, and build
-RUN npm install -g npm@11.0.0 && \
-    npm install && \
+RUN npm install -g npm@latest && \
     npm audit fix --force && \
     npm run build
 
