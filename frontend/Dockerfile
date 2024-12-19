@@ -1,5 +1,5 @@
 # build frontend from source
-FROM node:23.4-alpine AS build
+FROM node:23-alpine AS build
 
 ENV VITE_API_BASE=http://localhost:8000/
 ENV VITE_API_URL=http://localhost:8000/api
