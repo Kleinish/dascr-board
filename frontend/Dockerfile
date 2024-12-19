@@ -1,5 +1,5 @@
 # Build frontend from source
-FROM node:23-alpine AS build
+FROM node:20-alpine AS build
 
 # Set environment variables
 ENV VITE_API_BASE=http://localhost:8000/
@@ -12,7 +12,8 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Upgrade npm to the latest version, install dependencies, and build
-RUN npm run build
+RUN npm install; \
+    npm run build
 
 # Create runtime image
 FROM caddy:alpine
