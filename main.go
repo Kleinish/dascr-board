@@ -4,10 +4,10 @@ import (
 	"database/sql"
 	"os"
 
-	"github.com/kleinish/dascr-board/api"
-	"github.com/kleinish/dascr-board/config"
-	"github.com/kleinish/dascr-board/database"
-	"github.com/kleinish/dascr-board/logger"
+	"github.com/Kleinish/dascr-board/api"
+	"github.com/Kleinish/dascr-board/config"
+	"github.com/Kleinish/dascr-board/database"
+	"github.com/Kleinish/dascr-board/logger"
 )
 
 var (
