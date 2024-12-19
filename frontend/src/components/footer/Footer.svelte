@@ -14,6 +14,6 @@
             href="https://github.com/Kleinish/dascr-board"
             target="_blank"
             rel="noopener"
-            class="font-bold"><i class="fab fa-github fa-2x" /></a>
+            class="font-bold"><i class="fab fa-github fa-2x"></i></a>
     </div>
 </footer>
