@@ -12,8 +12,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Upgrade npm to the latest version, install dependencies, and build
-RUN npm install -g npm@latest && \
-    npm install && \
+RUN npm install && \
     npm run build
 
 # Create runtime image

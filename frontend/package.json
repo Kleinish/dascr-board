@@ -23,7 +23,7 @@
     "@sveltejs/kit": "^2.12.1",
     "autoprefixer": "^10.4.20",
     "concurrently": "^9.1.0",
-    "cross-env": "^latest",
+    "cross-env": "^7.0.3",
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
     "svelte": "^5.14.4",
