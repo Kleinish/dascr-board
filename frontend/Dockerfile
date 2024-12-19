@@ -12,8 +12,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Upgrade npm to the latest version, install dependencies, and build
-#RUN npm install && \
-  #  npm run build
+RUN npm run build
 
 # Create runtime image
 FROM caddy:alpine
