@@ -55,7 +55,7 @@
 <table class="w-full mt-3">
     <thead class="mx-3 border-b border-dashed border-opacity-10">
         <tr class="text-center">
-            <td class="" />
+            <td class=""></td>
             <td class="border-r border-dashed font-bold px-3 text-left">
                 Player
             </td>

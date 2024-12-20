@@ -106,7 +106,7 @@
     <div class="flex flex-col">
       <label for="playerImage" class="text-center"><span
           class="block uppercase border-2  p-4 rounded-2xl font-bold text-lg hover:bg-black hover:bg-opacity-30"><i
-            class="fas fa-upload" />
+            class="fas fa-upload"></i>
           upload avatar
           <input
             bind:files
@@ -119,10 +119,10 @@
     <button
       type="submit"
       class="block uppercase border-2 hover:bg-black hover:bg-opacity-30 text-lg mx-auto p-4 rounded-2xl"><i
-        class="fas fa-plus" />
+        class="fas fa-plus"></i>
       Add Player</button>
   </div>
 </form>
 
 <img class="hidden" id="source" src="" alt="" />
-<canvas class="hidden" id="canvas" width="300" height="300" />
+<canvas class="hidden" id="canvas" width="300" height="300"></canvas>

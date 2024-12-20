@@ -68,19 +68,20 @@
                 <th class="w-1/4"># of Players</th>
             </tr>
         </thead>
-        <tbody />
-        {#each allGames || [] as game}
-            <tr id={game.uid}>
-                <td>
-                    <a
-                        href={`/${game.uid}/scoreboard`}
-                        class="font-bold">{game.uid}</a>
-                </td>
-                <td>{game.game}</td>
-                <td>{game.variant}</td>
-                <td>{game.player.length}</td>
-            </tr>
-        {/each}
+        <tbody>
+            {#each allGames || [] as game}
+                <tr id={game.uid}>
+                    <td>
+                        <a
+                            href={`/${game.uid}/scoreboard`}
+                            class="font-bold">{game.uid}</a>
+                    </td>
+                    <td>{game.game}</td>
+                    <td>{game.variant}</td>
+                    <td>{game.player.length}</td>
+                </tr>
+            {/each}
+        </tbody>
     </table>
 </div>
 

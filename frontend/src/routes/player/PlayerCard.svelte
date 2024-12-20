@@ -26,7 +26,7 @@
     {#if showDelete}
       <button
         class="block uppercase border-2 hover:bg-black hover:bg-opacity-30 text-lg  p-4 mt-4 rounded-2xl"
-        on:click={onDelete(uid)}><i class="fas fa-trash" />
+        on:click={onDelete(uid)}><i class="fas fa-trash"></i>
         Delete</button>
     {/if}
   </div>

@@ -36,6 +36,7 @@
 </style>
 
 <button
+  aria-label="Toggle menu"
   class="text-white hover:text-gray-300 cursor-pointer mr-4 border-none focus:outline-none"
   class:open
   on:click={() => (open = !open)}>

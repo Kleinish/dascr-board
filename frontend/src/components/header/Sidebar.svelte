@@ -23,18 +23,18 @@
       href={'/'}
       on:click={() => {
         open = false;
-      }}><i class="fas fa-home w-10" />Start</a>
+      }}><i class="fas fa-home w-10"></i>Start</a>
     <a
       class="block"
       href={'/player'}
       on:click={() => {
         open = false;
-      }}><i class="fas fa-user w-10" />Player</a>
+      }}><i class="fas fa-user w-10"></i>Player</a>
     <a
       class="block"
       href={'/credits'}
       on:click={() => {
         open = false;
-      }}><i class="fas fa-info-circle w-10" />Credits</a>
+      }}><i class="fas fa-info-circle w-10"></i>Credits</a>
   </nav>
 </aside>

@@ -8,14 +8,7 @@
 </script>
 
 <style>
-    input:checked + svg {
-        display: block;
-    }
-    input:disabled + svg {
-        display: block;
-        background: rgba(0, 0, 0, 0.5);
-        cursor: not-allowed;
-    }
+    /* Removed unused CSS selectors */
 </style>
 
 <div class="flex flex-col">

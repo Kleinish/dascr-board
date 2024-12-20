@@ -16,12 +16,12 @@
     </p>
     <p>patrick@dascr.org</p>
     <div class="flex flex-row">
-    <p><a href="https://github.com/dascr" target="_blank"><i class="fab fa-github fa-2x mr-2"></i></a></p>
-    <p><a href="https://www.xing.com/profile/Patrick_Hener/portfolio" target="_blank"><i class="fab fa-xing fa-2x mr-2"></i></a></p>
-    <p><a href="https://www.linkedin.com/in/patrick-hener-84210595/" target="_blank"><i class="fab fa-linkedin fa-2x mr-2"></i></a></p>
-    <p><a href="https://hener.eu" target="_blank"><i class="fas fa-globe fa-2x mr-2"></i></a></p>
-    <p><a href="https://hesec.de" target="_blank"><i class="fas fa-blog fa-2x mr-2"></i></a></p>
-</div>
+      <p><a href="https://github.com/dascr" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-2x mr-2"></i></a></p>
+      <p><a href="https://www.xing.com/profile/Patrick_Hener/portfolio" target="_blank" aria-label="Xing"><i class="fab fa-xing fa-2x mr-2"></i></a></p>
+      <p><a href="https://www.linkedin.com/in/patrick-hener-84210595/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x mr-2"></i></a></p>
+      <p><a href="https://hener.eu" target="_blank" aria-label="Personal Website"><i class="fas fa-globe fa-2x mr-2"></i></a></p>
+      <p><a href="https://hesec.de" target="_blank" aria-label="Blog"><i class="fas fa-blog fa-2x mr-2"></i></a></p>
+    </div>
   </div>
   <div>
     <p>Creator: Patrick Hener</p>

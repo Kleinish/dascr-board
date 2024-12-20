@@ -28,21 +28,23 @@
         {/if}
         <div class="font-semibold text-3xl text-center pb-2">
             <table class="w-full">
-                <tr class="">
-                    {#each player.LastThrows as lt}
-                        <td>
-                            {#if lt.Modifier === 2}
-                                D{lt.Number}
-                            {:else if lt.Modifier === 3}
-                                T{lt.Number}
-                            {:else}{lt.Number}{/if}
-                        </td>
-                    {/each}
+                <tbody>
+                    <tr class="">
+                        {#each player.LastThrows as lt}
+                            <td>
+                                {#if lt.Modifier === 2}
+                                    D{lt.Number}
+                                {:else if lt.Modifier === 3}
+                                    T{lt.Number}
+                                {:else}{lt.Number}{/if}
+                            </td>
+                        {/each}
 
-                    {#each Array(3 - player.LastThrows.length) as _, __}
-                        <td>-</td>
-                    {/each}
-                </tr>
+                        {#each Array(3 - player.LastThrows.length) as _, __}
+                            <td>-</td>
+                        {/each}
+                    </tr>
+                </tbody>
             </table>
         </div>
         <div class="font-extrabold text-3xl mt-3 text-center">

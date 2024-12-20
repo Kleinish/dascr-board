@@ -95,43 +95,45 @@
           </div>
           <div slot="score" class="h-full">
             <table class="w-full h-full">
-              <tr class="">
-                {#each player.LastThrows as thr}
+              <tbody>
+                <tr class="">
+                  {#each player.LastThrows as thr}
+                    <td
+                      class="p-2 text-4xl font-extrabold text-center w-1/4 border-r border-dashed border-white border-opacity-10"
+                    >
+                      {#if thr.Modifier === 2}
+                        D{thr.Number}
+                      {:else if thr.Modifier === 3}
+                        T{thr.Number}
+                      {:else}{thr.Number}{/if}
+                    </td>
+                  {/each}
+                  {#each Array(3 - player.LastThrows.length) as _, __}
+                    <td
+                      class="p-2 text-4xl font-extrabold text-center w-1/4 border-r border-dashed border-white border-opacity-10"
+                    >
+                      -
+                    </td>
+                  {/each}
                   <td
-                    class="p-2 text-4xl font-extrabold text-center w-1/4 border-r border-dashed border-white border-opacity-10"
+                    rowspan="2"
+                    class="pl-4 p-2 text-4xl font-extrabold text-left w-1/4"
                   >
-                    {#if thr.Modifier === 2}
-                      D{thr.Number}
-                    {:else if thr.Modifier === 3}
-                      T{thr.Number}
-                    {:else}{thr.Number}{/if}
+                    <div class="flex flex-row">
+                      <div class="mr-2">Ø</div>
+                      <div>{player.Average}</div>
+                    </div>
                   </td>
-                {/each}
-                {#each Array(3 - player.LastThrows.length) as _, __}
+                </tr>
+                <tr class="">
                   <td
-                    class="p-2 text-4xl font-extrabold text-center w-1/4 border-r border-dashed border-white border-opacity-10"
+                    colspan="3"
+                    class="text-center p-2 text-4xl font-extrabold w-3/4 border-t border-white border-dashed border-opacity-10"
                   >
-                    -
+                    {player.ThrowSum}
                   </td>
-                {/each}
-                <td
-                  rowspan="2"
-                  class="pl-4 p-2 text-4xl font-extrabold text-left w-1/4"
-                >
-                  <div class="flex flex-row">
-                    <div class="mr-2">Ø</div>
-                    <div>{player.Average}</div>
-                  </div>
-                </td>
-              </tr>
-              <tr class="">
-                <td
-                  colspan="3"
-                  class="text-center p-2 text-4xl font-extrabold w-3/4 border-t border-white border-dashed border-opacity-10"
-                >
-                  {player.ThrowSum}
-                </td>
-              </tr>
+                </tr>
+              </tbody>
             </table>
           </div>
         </PlayerCard>
