@@ -3,8 +3,8 @@ package routes
 import (
 	"database/sql"
 
-	"github.com/dascr/dascr-board/game"
-	"github.com/dascr/dascr-board/ws"
+	"github.com/Kleinish/dascr-board/game"
+	"github.com/Kleinish/dascr-board/ws"
 	"github.com/go-chi/chi"
 )
 

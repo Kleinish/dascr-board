@@ -6,7 +6,7 @@
   "author": {
     "name": "Patrick Hener",
     "email": "patrickhener@gmx.de",
-    "url": "https://github.com/dascr/dascr-board"
+    "url": "https://github.com/Kleinish/dascr-board"
   },
   "scripts": {
     "dev:only": "vite dev",

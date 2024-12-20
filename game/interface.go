@@ -1,11 +1,11 @@
 package game
 
 import (
-	"github.com/dascr/dascr-board/player"
-	"github.com/dascr/dascr-board/podium"
-	"github.com/dascr/dascr-board/settings"
-	"github.com/dascr/dascr-board/undo"
-	"github.com/dascr/dascr-board/ws"
+	"github.com/Kleinish/dascr-board/player"
+	"github.com/Kleinish/dascr-board/podium"
+	"github.com/Kleinish/dascr-board/settings"
+	"github.com/Kleinish/dascr-board/undo"
+	"github.com/Kleinish/dascr-board/ws"
 )
 
 // BaseGame will hold all the game specific stuff

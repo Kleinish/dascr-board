@@ -1,7 +1,7 @@
 package podium
 
 import (
-	"github.com/dascr/dascr-board/player"
+	"github.com/Kleinish/dascr-board/player"
 )
 
 // Placement will hold the actual place on Podium

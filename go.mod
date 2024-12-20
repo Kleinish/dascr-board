@@ -1,4 +1,4 @@
-module github.com/dascr/dascr-board
+module github.com/Kleinish/dascr-board
 
 go 1.16
 
@@ -11,8 +11,8 @@ require (
 	github.com/h2non/filetype v1.1.1
 	github.com/mattn/go-sqlite3 v1.14.8
 	github.com/sirupsen/logrus v1.8.1
-	github.com/stretchr/testify v1.4.0 // indirect
-	golang.org/x/net v0.0.0-20201031054903-ff519b6c9102 // indirect
+	github.com/stretchr/testify v1.7.0 // indirect
+	golang.org/x/net v0.0.0-20210825183410-e898025ed96a // indirect
 	golang.org/x/sys v0.0.0-20210809222454-d867a43fc93e // indirect
-	gopkg.in/yaml.v2 v2.2.7 // indirect
+	gopkg.in/yaml.v2 v2.4.0 // indirect
 )

@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   backend:
-    image: ghcr.io/dascr/dascr-board/dascr-board-svc:main
+    image: ghcr.io/Kleinish/dascr-board/dascr-board-svc:main
     ports:
       - "8000:8000"
     environment:
@@ -12,7 +12,7 @@ services:
   frontend:
     depends_on:
       - backend
-    image: ghcr.io/dascr/dascr-board/dascr-board-ui:main
+    image: ghcr.io/Kleinish/dascr-board/dascr-board-ui:main
     ports:
       - "8080:8080"
     environment:
