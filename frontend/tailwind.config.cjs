@@ -6,11 +6,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: {
-    content: ['./src/**/*.svelte', './public/*.html'],
-    css: ['./public/**/*.css'],
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: ['./src/**/*.svelte', './public/*.html'],
   theme: {
     gradientColorStops: (theme) => ({
       ...theme('colors'),
