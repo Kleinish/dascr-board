@@ -3,8 +3,8 @@ package undo
 import (
 	"errors"
 
-	"github.com/Kleinish/dascr-board/player"
-	"github.com/Kleinish/dascr-board/throw"
+	"github.com/dascr/dascr-board/player"
+	"github.com/dascr/dascr-board/throw"
 )
 
 // Sequence will be identified by a number and will hold actions to be undone

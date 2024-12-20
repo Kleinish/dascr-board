@@ -11,10 +11,9 @@
     <div class="text-center"><b>DaSCR - score and more</b></div>
     <div class="text-right">
         <a
-            href="https://github.com/Kleinish/dascr-board"
+            href="https://github.com/dascr/dascr-board"
             target="_blank"
             rel="noopener"
-            class="font-bold"
-            aria-label="GitHub Repository"><i class="fab fa-github fa-2x"></i></a>
+            class="font-bold"><i class="fab fa-github fa-2x" /></a>
     </div>
 </footer>

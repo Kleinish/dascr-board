@@ -1,6 +1,6 @@
 package ws
 
-import "github.com/Kleinish/dascr-board/logger"
+import "github.com/dascr/dascr-board/logger"
 
 // Message represents a websocket message
 type Message struct {

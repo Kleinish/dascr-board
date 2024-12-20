@@ -60,5 +60,5 @@
         href={`/${gameid}/game`}>{baseURL + `/${gameid}/game`}</a>
     </p>
   </div>
-  <div class="mx-auto" id="qrcode"></div>
+  <div class="mx-auto" id="qrcode" />
 </div>

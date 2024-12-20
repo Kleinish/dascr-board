@@ -139,7 +139,7 @@
     <button
       type="submit"
       class="block uppercase border-2 hover:bg-black hover:bg-opacity-30 text-lg mx-auto p-4 rounded-2xl"
-      ><i class="fas fa-play pr-2"></i>
+      ><i class="fas fa-play pr-2" />
       Start Game</button
     >
 
@@ -150,7 +150,7 @@
         class="block uppercase border-2 hover:bg-black hover:bg-opacity-30 text-lg mx-auto p-2 rounded-2xl"
         type="button"
         on:click={() => (open = !open)}
-        ><i class="fas fa-sliders-h pr-2"></i>Further Settings</button
+        ><i class="fas fa-sliders-h pr-2" />Further Settings</button
       >
     </div>
 

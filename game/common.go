@@ -3,11 +3,11 @@ package game
 import (
 	"math"
 
-	"github.com/Kleinish/dascr-board/player"
-	"github.com/Kleinish/dascr-board/throw"
-	"github.com/Kleinish/dascr-board/undo"
-	"github.com/Kleinish/dascr-board/utils"
-	"github.com/Kleinish/dascr-board/ws"
+	"github.com/dascr/dascr-board/player"
+	"github.com/dascr/dascr-board/throw"
+	"github.com/dascr/dascr-board/undo"
+	"github.com/dascr/dascr-board/utils"
+	"github.com/dascr/dascr-board/ws"
 )
 
 var (

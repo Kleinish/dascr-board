@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/Kleinish/dascr-board/ws"
+	"github.com/dascr/dascr-board/ws"
 	"github.com/go-chi/chi"
 )
 

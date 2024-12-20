@@ -1,18 +1,26 @@
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
-  content: [
-    './src/**/*.svelte', // Include all Svelte files in src
-    './public/*.html', // Include any HTML files in public
-  ],
-  theme: {
-    extend: {
-      gradientColorStops: {
-        primary: '#1d3c4c',
-        secondary: '#3c5b6c',
-      },
-    },
+  mode: 'jit',
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
   },
-  darkMode: 'media', // or 'class'
+  purge: {
+    content: ['./src/**/*.svelte', './public/*.html'],
+    css: ['./public/**/*.css'],
+  },
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    gradientColorStops: (theme) => ({
+      ...theme('colors'),
+      primary: '#1d3c4c',
+      secondary: '#3c5b6c',
+    }),
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
   plugins: [],
 };

@@ -6,10 +6,10 @@ import (
 	"sort"
 	"time"
 
-	"github.com/Kleinish/dascr-board/player"
-	"github.com/Kleinish/dascr-board/podium"
-	"github.com/Kleinish/dascr-board/throw"
-	"github.com/Kleinish/dascr-board/ws"
+	"github.com/dascr/dascr-board/player"
+	"github.com/dascr/dascr-board/podium"
+	"github.com/dascr/dascr-board/throw"
+	"github.com/dascr/dascr-board/ws"
 )
 
 // WSSendUpdate will trigger an update for a game

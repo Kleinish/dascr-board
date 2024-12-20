@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/Kleinish/dascr-board/config"
-	"github.com/Kleinish/dascr-board/logger"
-	"github.com/Kleinish/dascr-board/ws"
+	"github.com/dascr/dascr-board/config"
+	"github.com/dascr/dascr-board/logger"
+	"github.com/dascr/dascr-board/ws"
 )
 
 // API holds the relevant information of the backend API

@@ -4,7 +4,7 @@ import (
 	"database/sql"
 
 	// Import of the sqlite3 driver
-	"github.com/Kleinish/dascr-board/config"
+	"github.com/dascr/dascr-board/config"
 	_ "github.com/mattn/go-sqlite3"
 )
 
