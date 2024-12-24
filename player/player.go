@@ -5,7 +5,6 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"math/rand"
 	"net/http"
 	"os"
@@ -218,7 +217,9 @@ func AddPlayer(db *sql.DB) http.HandlerFunc {
 		err := json.NewDecoder(r.Body).Decode(&player)
 		if err != nil {
 			logger.Errorf("Unable to get request body when creating player: %+v", err)
-			http.Error(w, err.Error(), http.StatusBadRequest)
+			if err != nil {
+				http.Error(w, err.Error(), http.StatusBadRequest)
+			}
 			return
 		}
 
@@ -446,7 +447,7 @@ func HandlePlayerImage(db *sql.DB) http.HandlerFunc {
 					}
 					return
 				}
-				if err := ioutil.WriteFile(savepath, decodedImg, 0600); err != nil {
+				if err := os.WriteFile(savepath, decodedImg, 0600); err != nil {
 					logger.Errorf("Writing image content to file: %+v", err)
 					w.WriteHeader(http.StatusBadRequest)
 					if _, err := w.Write([]byte("notdone")); err != nil {
