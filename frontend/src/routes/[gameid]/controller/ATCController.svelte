@@ -10,6 +10,7 @@
 
     let apiBaseURL = myenv.apiBase;
     let gameid = $page.params.gameid;
+let showEndGameButton = false;
 
     onMount(async () => {
         // init websocket
@@ -24,6 +25,10 @@
         });
 
         socket.addEventListener('update', async () => {
+        // Check if the game is over
+         if ($state.gameData.GameOver) {
+             showEndGameButton = true;
+         }
             await state.updateState(gameid);
         });
     });

@@ -16,6 +16,7 @@
 
     let mode = '';
     let randomGhost = '';
+    let showEndGameButton = false;
 
     onMount(async () => {
         // init websocket
@@ -33,6 +34,11 @@
 
         socket.addEventListener('update', async () => {
             await state.updateState(gameid);
+            
+            // Check if the game is over
+            if ($state.gameData.GameOver) {
+                showEndGameButton = true;
+            }
         });
 
         socket.addEventListener('redirect', () => {
@@ -165,3 +171,14 @@
     revealed={$state.revealed}
     numbers={$state.numbers}
     allRevealed={$state.allRevealed} />
+
+{#if showEndGameButton}
+    <div class="fixed bottom-4 left-0 right-0 flex justify-center z-50">
+        <button 
+            on:click={() => goto(`/${gameid}/endgame`)}
+            class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
+        >
+            View Final Leaderboard
+        </button>
+    </div>
+{/if}
