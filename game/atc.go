@@ -50,6 +50,11 @@ func (g *AtcGame) GetStatus() BaseGame {
         if g.Base.EndTime.IsZero() && g.Base.GameState == "WON" {
                 g.Base.EndTime = time.Now()
         }
+        return g.Base
+
+        if g.Base.EndTime.IsZero() && g.Base.GameState == "WON" {
+                g.Base.EndTime = time.Now()
+        }
 
 	if g.Base.EndTime.IsZero() return g.Basereturn g.Base g.Base.GameState == "WON" {
 		g.Base.EndTime = time.Now()
