@@ -219,7 +219,7 @@ func CreateGame(db *sql.DB, h *ws.Hub) http.HandlerFunc {
 			}
 
 		case "elim":
-			data.GameObject = &EliminiationGame{
+			data.GameObject = &EliminationGame{
 				Base: BaseGame{
 					UID:          data.UID,
 					Game:         data.Game,

@@ -2,6 +2,7 @@ package game
 
 import (
 	"math"
+	"time"
 
 	"github.com/Kleinish/dascr-board/player"
 	"github.com/Kleinish/dascr-board/throw"
@@ -233,6 +234,7 @@ func doWin(base *BaseGame) {
 	base.GameState = "WON"
 	base.Message = "Game shot!"
 	base.SoundToPlay = "win"
+	base.EndTime = time.Now() // Set end time when game is won
 }
 
 // This will strip response for Display function for FrontEnd

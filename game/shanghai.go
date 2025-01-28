@@ -41,12 +41,16 @@ func (g *ShanghaiGame) StartGame() error {
 		Action: "CREATEGAME",
 	})
 	g.Base.SoundToPlay = "nextplayer"
+	g.Base.EndTime = time.Time{} // Reset to zero time
 
 	return nil
 }
 
 // GetStatus will satisfy interface Game for Shanghai
 func (g *ShanghaiGame) GetStatus() BaseGame {
+	if g.Base.EndTime.IsZero() && g.Base.GameState == "WON" {
+		g.Base.EndTime = time.Now()
+	}
 	return g.Base
 }
 
@@ -126,6 +130,7 @@ func (g *ShanghaiGame) Rematch(h *ws.Hub) error {
 	g.Base.ActivePlayer = rg.Intn(len(g.Base.Player))
 	g.Base.ThrowRound = 1
 	g.Base.SoundToPlay = "nextplayer"
+	g.Base.EndTime = time.Time{} // Reset to zero time
 
 	for i := range g.Base.Player {
 		score := score.BaseScore{
