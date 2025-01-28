@@ -134,9 +134,20 @@ export const undo = (gameid) => {
   api.post(`game/${gameid}/undo`);
 };
 
-export const endGame = (gameid) => {
-  if (confirm('Really end game?')) {
+export const quitGame = (gameid) => {
+  if (confirm('Really quit game? All progress will be lost.')) {
     api.delete(`game/${gameid}`);
+  }
+};
+
+export const finishGame = async (gameid) => {
+  try {
+    // Set the game end time
+    await api.post(`game/${gameid}/finish`);
+    // Redirect to the game stats page
+    window.location.href = `/stats/${gameid}`;
+  } catch (error) {
+    console.error('Error finishing game:', error);
   }
 };
 
