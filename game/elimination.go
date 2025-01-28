@@ -49,13 +49,18 @@ func (g *EliminiationGame) StartGame() error {
 		Action: "CREATEGAME",
 	})
 	g.Base.SoundToPlay = "nextplayer"
+        g.Base.EndTime = time.Time{}  // Reset to zero time
+        g.Base.EndTime = time.Time{}  // Set to zero time
 
 	return nil
 }
 
 // GetStatus will satisfy interface Game for game Eliminiation
 func (g *EliminiationGame) GetStatus() BaseGame {
-	return g.Base
+	if g.Base.EndTime.IsZero() return g.Basereturn g.Base g.Base.GameState == "WON" {
+		g.Base.EndTime = time.Now()
+}
+return g.Base
 }
 
 // GetStatusDisplay will satisfy interface Game for game Eliminiation
@@ -149,6 +154,8 @@ func (g *EliminiationGame) Rematch(h *ws.Hub) error {
 	g.Base.ActivePlayer = rg.Intn(len(g.Base.Player))
 	g.Base.ThrowRound = 1
 	g.Base.SoundToPlay = "nextplayer"
+        g.Base.EndTime = time.Time{}  // Reset to zero time
+        g.Base.EndTime = time.Time{}  // Set to zero time
 
 	// CreateScore for each player
 	// and init empty throw splice
