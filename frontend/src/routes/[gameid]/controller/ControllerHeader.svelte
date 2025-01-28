@@ -1,19 +1,23 @@
 <script>
     export let gameid, gameData;
     import state from '$stores/stateStore';
-    import { endGame, rematch, nextPlayer } from '$utils/methods';
+    import { quitGame, finishGame, rematch, nextPlayer } from '$utils/methods';
 </script>
 
 <div class="flex flex-row">
     <button
-        class="text-center border w-1/2 font-extrabold text-2xl rounded-tl-2xl p-3 bg-black bg-opacity-30 hover:bg-opacity-50 focus:outline-none"
-        on:click={() => endGame(gameid)}>End Game</button>
+        class="text-center border w-1/3 font-extrabold text-2xl rounded-tl-2xl p-3 bg-black bg-opacity-30 hover:bg-opacity-50 focus:outline-none"
+        on:click={() => quitGame(gameid)}>Quit Game</button>
     <button
-        class="text-center border w-1/2 font-extrabold text-2xl rounded-tr-2xl p-3 bg-black bg-opacity-30 hover:bg-opacity-50 focus:outline-none"
+        class="text-center border w-1/3 font-extrabold text-2xl p-3 bg-black bg-opacity-30 hover:bg-opacity-50 focus:outline-none"
+        class:hidden={gameData.GameState !== 'WON'}
+        on:click={() => finishGame(gameid)}>Finish Game</button>
+    <button
+        class="text-center border w-1/3 font-extrabold text-2xl p-3 bg-black bg-opacity-30 hover:bg-opacity-50 focus:outline-none"
         class:hidden={gameData.GameState !== 'WON'}
         on:click={() => rematch(gameid)}>Rematch</button>
     <button
-        class="text-center border w-1/2 font-extrabold text-2xl rounded-tr-2xl p-3 bg-black bg-opacity-30 hover:bg-opacity-50 focus:outline-none"
+        class="text-center border w-1/3 font-extrabold text-2xl rounded-tr-2xl p-3 bg-black bg-opacity-30 hover:bg-opacity-50 focus:outline-none"
         class:hidden={$state.gameData.GameState === 'WON'}
         on:click={() => nextPlayer(gameid)}>Next Player</button>
 </div>

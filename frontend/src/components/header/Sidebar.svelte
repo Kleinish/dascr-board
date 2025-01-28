@@ -32,6 +32,18 @@
       }}><i class="fas fa-user w-10"></i>Player</a>
     <a
       class="block"
+      href={'/stats'}
+      on:click={() => {
+        open = false;
+      }}><i class="fas fa-chart-bar w-10"></i>Game History</a>
+    <a
+      class="block"
+      href={'/leaderboard'}
+      on:click={() => {
+        open = false;
+      }}><i class="fas fa-trophy w-10"></i>Leaderboard</a>
+    <a
+      class="block"
       href={'/credits'}
       on:click={() => {
         open = false;
