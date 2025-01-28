@@ -46,7 +46,11 @@ func (g *ATCGame) StartGame() error {
 }
 
 // GetStatus will satisfy interface Game for ATC
-func (g *ATCGame) GetStatus() BaseGame {
+func (g *AtcGame) GetStatus() BaseGame {
+        if g.Base.EndTime.IsZero() && g.Base.GameState == "WON" {
+                g.Base.EndTime = time.Now()
+        }
+
 	if g.Base.EndTime.IsZero() return g.Basereturn g.Base g.Base.GameState == "WON" {
 		g.Base.EndTime = time.Now()
 }

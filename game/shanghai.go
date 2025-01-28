@@ -49,6 +49,10 @@ func (g *ShanghaiGame) StartGame() error {
 
 // GetStatus will satisfy interface Game for Shanghai
 func (g *ShanghaiGame) GetStatus() BaseGame {
+        if g.Base.EndTime.IsZero() && g.Base.GameState == "WON" {
+                g.Base.EndTime = time.Now()
+        }
+
 	if g.Base.EndTime.IsZero() return g.Basereturn g.Base g.Base.GameState == "WON" {
 		g.Base.EndTime = time.Now()
 }

@@ -59,10 +59,10 @@ func (g *X01Game) StartGame() error {
 
 // GetStatus will satisfy interface Game for game X01
 func (g *X01Game) GetStatus() BaseGame {
-        if g.Base.EndTime.IsZero() return g.Basereturn g.Base g.Base.GameState == "WON" {
-		g.Base.EndTime = time.Now()
-}
-return g.Base
+        if g.Base.EndTime.IsZero() && g.Base.GameState == "WON" {
+                g.Base.EndTime = time.Now()
+        }
+        return g.Base
 }
 
 // GetStatusDisplay will satisfy interface Game for game X01
