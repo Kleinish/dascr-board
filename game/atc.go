@@ -71,7 +71,8 @@ func (g *ATCGame) RequestThrow(number, modifier int, h *ws.Hub) error {
         previousState := g.Base.GameState
 
         // Check game state
-        if g.Base.GameState == "THROW" {
+        switch g.Base.GameState {
+case "THROW":
                 // check if ongoing round else create
                 checkOngoingElseCreate(activePlayer, &g.Base, sequence)
 

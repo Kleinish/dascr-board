@@ -78,7 +78,8 @@ func (g *ShanghaiGame) RequestThrow(number, modifier int, h *ws.Hub) error {
 	previousMessage := g.Base.Message
 	previousState := g.Base.GameState
 
-	if g.Base.GameState == "THROW" {
+	switch g.Base.GameState {
+case "THROW":
 		// check if ongoing round else create
 		checkOngoingElseCreate(activePlayer, &g.Base, sequence)
 

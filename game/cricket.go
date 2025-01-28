@@ -114,7 +114,8 @@ func (g *CricketGame) RequestThrow(number, modifier int, h *ws.Hub) error {
 	revealed := false
 
 	// Check game state
-	if g.Base.GameState == "THROW" {
+	switch g.Base.GameState {
+case "THROW":
 		// check if ongoing round else create
 		checkOngoingElseCreate(activePlayer, &g.Base, sequence)
 
@@ -233,7 +234,11 @@ func (g *CricketGame) RequestThrow(number, modifier int, h *ws.Hub) error {
 		return nil
 	}
 
-	return fmt.Errorf("game state is '%+v', so no throw accepted", g.Base.GameState)
+	case "WON":
+			// Silently ignore throws after game is won
+			return nil
+default:
+			return fmt.Errorf("game state is '%+v', so no throw accepted", g.Base.GameState)
 }
 
 // Undo will satisfy interface Game for game Cricket

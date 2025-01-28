@@ -91,7 +91,8 @@ func (g *SplitGame) RequestThrow(number, modifier int, h *ws.Hub) error {
 	activePlayer := &g.Base.Player[g.Base.ActivePlayer]
 
 	// Check game state
-	if g.Base.GameState == "THROW" {
+	switch g.Base.GameState {
+case "THROW":
 		// check if ongoing round else create
 		checkOngoingElseCreate(activePlayer, &g.Base, sequence)
 
